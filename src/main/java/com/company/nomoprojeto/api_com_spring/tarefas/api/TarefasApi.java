@@ -38,4 +38,10 @@ public class TarefasApi {
     public String delete (@PathVariable("tarefaId") Long tarefaId) {
         return  tarefaFacade.deleteTarefa(tarefaId);
     }
+
+    @GetMapping("/{tarefaId}")
+    @ResponseBody
+    public TarefaDto getById(@PathVariable("tarefaId") Long tarefaId){
+        return  tarefaFacade.getById(tarefaId);
+    }
 }
